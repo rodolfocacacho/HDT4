@@ -7,6 +7,7 @@
 /**
  *
  * @author Olivet
+ * @param <E>
  */
 public interface IStack<E> {
 

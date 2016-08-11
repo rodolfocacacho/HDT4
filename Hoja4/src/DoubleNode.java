@@ -8,6 +8,19 @@
  *
  * @author Olivet
  */
-public class DoubleNode {
+public class DoubleNode<E> extends Node{
     
+    public DoubleNode(){
+        
+    }
+    
+    private Node<E> prev;
+    
+    public void setPrev(Node<E> prev){
+        this.prev = prev;
+    }
+    
+    public Node getPrev(){
+        return prev;
+    }
 }

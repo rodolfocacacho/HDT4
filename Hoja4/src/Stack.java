@@ -8,6 +8,27 @@
  *
  * @author Olivet
  */
-public class Stack {
-    
+public class Stack<E> {
+    public void push(E e){
+        
+    }
+    public E pop(){
+        
+        return ;
+    }
+    public boolean isEmpty(){
+        
+        return ;
+    }
+    public E getLast(){
+        
+        return ;
+    }
+    public int size(){
+        
+        return ;
+    }
+    public void clear(){
+        
+    }
 }
