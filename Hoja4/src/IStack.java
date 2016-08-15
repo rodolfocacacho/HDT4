@@ -16,5 +16,4 @@ public interface IStack<E> {
     public boolean isEmpty();
     public E getLast();
     public int size();
-    public void clear();
 }
