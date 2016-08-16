@@ -8,14 +8,28 @@
  *
  * @author Olivet
  */
-public abstract class AbstractStack{
-    protected int count;
+public abstract class AbstractStack implements IStack{
     
-    public int size(){
-        return count;
+    public void push(Object e){
+        
     }
-    
+    public Object pop(){
+        
+        return null;
+    }
     public boolean isEmpty(){
-        return count == 0; //true si vacia, false si no
+        
+        return false;
+    }
+    public Object getLast(){
+        
+        return null;
+    }
+    public int size(){
+        
+        return 0;
+    }
+    public void clear(){
+        
     }
 }
