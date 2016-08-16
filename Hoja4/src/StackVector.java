@@ -14,35 +14,33 @@ import java.util.Vector;
  */
 public class StackVector<E> extends AbstractStack implements IStack<E>{
     private Vector<E> pila;
-    public void pila(){
-        pila = new Vector<>();
+    public StackVector(){
+        pila = new Vector<E>();
         count = 0;
     }
-    
     /**
      *
-     * @param e
+     * @param e element tipo E
      */
     @Override
     public void push(E e){
         pila.add(e); //Agrega en ultima posicion
         count++; //sumarle 1 al contador para saber cuantos elementos se tienen
     }
-
     /**
      *
-     * @return
+     * @return E ultimo elemento reduciendo size en 1
      */
     @Override
     public E pop(){
-        E e = pila.remove(count-1); //quitar y extraer el elemento en la ultima posicion
+        if (count == 0)
+            return null;
         count--; //restarle 1 al contador
-        return e;
+        return pila.remove(count);
     }
-
     /**
      *
-     * @return
+     * @return E ultimo elemento
      */
     @Override
     public E getLast(){
