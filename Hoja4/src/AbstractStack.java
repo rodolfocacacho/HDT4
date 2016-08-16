@@ -10,26 +10,43 @@
  */
 public abstract class AbstractStack implements IStack{
     
+    /**
+     *
+     * @param e
+     */
+    @Override
     public void push(Object e){
         
     }
+
+    /**
+     *
+     * @return lastObjectInStack
+     */
+    @Override
     public Object pop(){
         
         return null;
     }
+
+    /**
+     *
+     * @return vectorStatus
+     */
+    @Override
     public boolean isEmpty(){
         
         return false;
     }
-    public Object getLast(){
-        
-        return null;
-    }
+
+    /**
+     *
+     * @return vectorSize
+     */
+    @Override
     public int size(){
         
         return 0;
     }
-    public void clear(){
-        
-    }
+
 }

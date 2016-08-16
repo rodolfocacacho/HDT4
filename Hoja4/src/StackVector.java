@@ -1,49 +1,33 @@
-
-import java.util.Vector;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
- * @author Olivet
- * @param <E>
+ * @author RodolfoCyReneO
  */
-public class StackVector<E> extends AbstractStack implements IStack<E>{
-    private Vector<E> pila;
+import java.util.*;
+
+
+public class StackVector extends AbstractStack{
+    
+    private Vector<Object> pila;
+    
     public StackVector(){
-        pila = new Vector<E>();
-        count = 0;
+        pila = new Vector<Object>();
     }
-    /**
-     *
-     * @param e element tipo E
-     */
-    @Override
-    public void push(E e){
-        pila.add(e); //Agrega en ultima posicion
-        count++; //sumarle 1 al contador para saber cuantos elementos se tienen
+    
+    public int size(){
+        return pila.size();
     }
-    /**
-     *
-     * @return E ultimo elemento reduciendo size en 1
-     */
-    @Override
-    public E pop(){
-        if (count == 0)
-            return null;
-        count--; //restarle 1 al contador
-        return pila.remove(count);
+    
+    public void push(Object e){
+        pila.add(e);
     }
-    /**
-     *
-     * @return E ultimo elemento
-     */
-    @Override
-    public E getLast(){
-        return pila.get(count-1); //obtiene el elemento en la utlima posicion del vector
+    
+    public Object pop (){
+        Object e = pila.lastElement();
+        pila.removeElementAt(pila.size()-1);
+        return e;
     }
+    
+    public boolean isEmpty(){
+        return pila.isEmpty();
+    }
+
 }

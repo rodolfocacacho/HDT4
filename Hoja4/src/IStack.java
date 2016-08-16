@@ -11,9 +11,8 @@
  */
 public interface IStack<E> {
 
-    public void push(E e);
-    public E pop();
+    public void push(Object e);
+    public Object pop();
     public boolean isEmpty();
-    public E getLast();
     public int size();
 }
