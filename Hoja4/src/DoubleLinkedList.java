@@ -1,52 +1,58 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
- * @author Olivet
- * @param <E>
+ * @author Estructura de Datos
+ * @version 0.0
+ * @date 09/08/2016
+ * @file DoublyLinkedList.java
+ * Implementa una lista doblemente enlazada
+ * 
  */
-public class DoubleLinkedList<E> extends AbstractStack implements IList<E> {
-    
-    private DoubleNode<E> head;
-    private DoubleNode<E> temp;
-    private E val;
-    
-    public DoubleLinkedList(){
-        head = null;
-        temp = null;
-        val = null;
-        count = 0;
-    }
-    @Override
-    public void addFirst(E e) {
-        count++;
-        temp = head;
-        head = new DoubleNode();
-        head.setValue(e);
-        head.setNext(temp);
-        temp.setPrev(head);
-    }
+public class DoubleLinkedList<E> {
+	/**
+	 * Atributos
+	 */
+	private DoubleNode<E> head;
+	private DoubleNode<E> tail;
+	private int count;
 
-    @Override
-    public E removeFirst() {
-        if (head == null)
-            return null;
-        val = head.getValue();
-        head = head.getNext(); //ERROR AQUI NO SE PORQUE
-        count--;
-        return val;
-    }
-
-    @Override
-    public E getFirst() {
-        val = head.getValue();
-        return val;
-    }
+	
+	public DoubleLinkedList(DoubleNode<E> head, DoubleNode<E> tail, int count) {
+		this.head = head;
+		this.tail = tail;
+		this.count = count;
+	}
 
 
-    
+	public DoubleLinkedList() {
+		count = 0;
+		head = null; 
+		tail = null;
+	}
+
+
+
+	public DoubleNode<E> getHead() {
+		return head;
+	}
+	
+	public void setHead(DoubleNode<E> head) {
+		this.head = head;
+	}
+	
+	public DoubleNode<E> getTail() {
+		return tail;
+	}
+	
+	public void setTail(DoubleNode<E> tail) {
+		this.tail = tail;
+	}
+	
+	public int getCount() {
+		return count;
+	}
+	
+	public void setCount(int count) {
+		this.count = count;
+	}
+	
+
 }

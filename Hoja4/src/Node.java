@@ -1,36 +1,52 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
- * @author Olivet
- * @param <E>
+ * @author Estructura de Datos
+ * @version 0.0
+ * @date 24/07/2016
+ * @file Node.java
+ * Modela un elemento de una lista enlazada
  */
-public class Node<E> {
-    
-    public Node(){
-        
-    }
-    
-    protected E value;
-    protected Node<E> next;
-    
-    public void setValue(E value){
-        this.value = value;
-    }
-    
-    public E getValue(){
-        return value;
-    }
-    
-    public void setNext(Node next){
-        this.next = next;
-    }
-    
-    public Node<E> getNext(){
-        return next;
-    }
+public class Node<E>
+{
+   protected E data; // value stored in this element
+   protected Node<E> nextElement; // ref to next
+
+   public Node(E v, Node<E> next)
+   // pre: v is a value, next is a reference to 
+   //      remainder of list
+   // post: an element is constructed as the new 
+   //      head of list
+   {
+       data = v;
+       nextElement = next;
+   }
+
+   public Node(E v)
+   // post: constructs a new tail of a list with value v
+   {
+      this(v,null);
+   }
+
+   public Node<E> next()
+   // post: returns reference to next value in list
+   {
+      return nextElement;
+   }
+
+   public void setNext(Node<E> next)
+   // post: sets reference to new next value
+   {
+      nextElement = next;
+   }
+
+   public E value()
+   // post: returns value associated with this element
+   {
+      return data;
+   }
+
+   public void setValue(E value)
+   // post: sets value associated with this element
+   {
+      data = value;
+   }
 }

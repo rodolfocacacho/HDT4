@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 /*
@@ -9,41 +8,31 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Olivet
- * @param <E>
+ * @author RodolfoC
  */
-public class StackArray<E> extends AbstractStack implements IStack<E> {
-    private ArrayList<E> pila;
+public class StackArray extends AbstractStack{
+    private ArrayList<Object> pila;
+    
     public StackArray(){
-        pila = new ArrayList<>();
-        count = 0;
+    pila = new ArrayList<Object>();
     }
-    /**
-     *
-     * @param e elemento tipo E
-     */
-    @Override
-    public void push(E e){
-        pila.add(e); //Agrega en ultima posicion e incrementa size en 1
-        count++;
+    
+    public int size(){
+        return pila.size();
     }
-    /**
-     *
-     * @return E elemento en la ultima posicion reduciendo size en 1
-     */
-    @Override
-    public E pop(){
-        if (count == 0)
-            return null;
-        count--;
-        return pila.remove(count);
+    
+    public boolean isEmpty(){
+        return pila.isEmpty();
     }
-    /**
-     *
-     * @return E ultimo elemento
-     */
-    @Override
-    public E getLast(){
-        return pila.get(count-1);
+    
+    public Object pop(){
+        Object e = pila.get(pila.size()-1);
+        pila.remove(pila.size()-1);
+        return e;
     }
+    
+    public void push(Object e){
+        pila.add(e);
+    } 
 }
+
