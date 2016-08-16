@@ -36,6 +36,8 @@ public class SinglyLinkedList<E> extends AbstractStack implements IList<E> {
     }
     @Override
     public E removeFirst() {
+        if (head == null)
+            return null;
         val = head.getValue();
         head = head.getNext();
         count--;

@@ -7,6 +7,7 @@
 /**
  *
  * @author Olivet
+ * @param <E>
  */
 public class Node<E> {
     
@@ -15,7 +16,7 @@ public class Node<E> {
     }
     
     protected E value;
-    protected Node next;
+    protected Node<E> next;
     
     public void setValue(E value){
         this.value = value;
@@ -29,7 +30,7 @@ public class Node<E> {
         this.next = next;
     }
     
-    public Node getNext(){
+    public Node<E> getNext(){
         return next;
     }
 }

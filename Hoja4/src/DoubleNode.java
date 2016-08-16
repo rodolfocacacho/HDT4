@@ -7,8 +7,9 @@
 /**
  *
  * @author Olivet
+ * @param <E>
  */
-public class DoubleNode<E> extends Node{
+public class DoubleNode<E> extends Node<E>{
     
     public DoubleNode(){
         
@@ -20,7 +21,7 @@ public class DoubleNode<E> extends Node{
         this.prev = prev;
     }
     
-    public Node getPrev(){
+    public Node<E> getPrev(){
         return prev;
     }
 }
