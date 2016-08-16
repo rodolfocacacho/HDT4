@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Olivet
- */
 public class Main {
-    public static void main(String [] args){
-        
-    }
+	public static void main(String[] args){
+		Calculadora calc = new Calculadora();
+		/* Aqui se introduce la ruta del archivo con doble slash en vez de simple */
+		int resultado = calc.Calcular(calc.LeerArchivo("C:\\Users\\RodolfoC\\Desktop\\prueba.txt"));
+		System.out.println(String.valueOf("El resultado es: " + resultado));
+	}
 }
